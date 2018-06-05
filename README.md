@@ -49,6 +49,9 @@ This code example demonstrates the implementation of a simple BLE Immediate Aler
 #### 2. CE212741 - IPSP Router and Node with PSoC 6 MCU with BLE Connectivity
 This example demonstrates how to set up the IPv6 communication infrastructure between two devices (CY8CKIT-062 PSoC 6 BLE Pioneer Kits) over a BLE transport using the L2CAP channel. Creation and transmission of IPv6 packets over the BLE is not part of this example.
 The example consists of two projects: IPSP Router (GAP Central) and IPSP Node (GAP Peripheral). The router sends generated packets with different content to the node in a loop and validates them with the data packet received afterward. The node wraps the received data coming from the router back to the router.
+#### 3. CE215118 – BLE Multi-Master Single Slave with PSoC 6 MCU with BLE Connectivity
+This example demonstrates how to configure the PSoC® 6 MCU with Bluetooth Low Energy (BLE) Connectivity device in
+simultaneous Multiple Master and Single Slave modes of operation. The Multi-Master Single Slave project uses three BLE Central connections and one Peripheral connection.
 
 ## References
 #### 1. PSoC 6 MCU
