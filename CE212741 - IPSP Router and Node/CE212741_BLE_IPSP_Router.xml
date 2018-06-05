@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE212741_BLE_IPSP_Router" StarterProject="true" WorkspaceName="CE212741.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>IPSP</Keyword>
+  <Keyword>IPSS</Keyword>
+  <Keyword>IPv6</Keyword>
+  <Description> This example shows how to setup an IPv6 communication infrastructure between two devices over a BLE transport. </Description>
+  <ShortDescription>Shows how to use the IPSP with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE212741.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE212736_PSoC6BLE_FindMe" WorkspaceName="CE212736.cywrk">
+	<Version>1.20</Version>
+  <Keyword>BLE_PDL</Keyword>
+  <Keyword Hidden="true">CY8CKIT-062-BLE</Keyword>
+  <Description>This code example demonstrates the implementation of a simple BLE immediate alert service (IAS) based Find Me profile using PSoC 6 BLE.</Description>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE212736.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion>
+</Project>
