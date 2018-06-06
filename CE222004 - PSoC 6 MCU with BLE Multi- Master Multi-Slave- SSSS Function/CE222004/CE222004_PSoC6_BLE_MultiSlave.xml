@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="BLE_MultiSlave" WorkspaceName="CE222004.cywrk">
+  <Version>1.10</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>Multi Slave</Keyword>
+  <Keyword>Health Thermometer Service</Keyword>
+  <Keyword>Device Information Service</Keyword>
+  <Keyword>Custom service</Keyword>
+  <Keyword></Keyword>
+  <Keyword Hidden="true">CY8CKIT-062-BLE</Keyword>
+  <Description>This example demonstrates the implementation of multi-slave functionality of the PSoC® 6 MCU with BLE Connectivity (PSoC 6 BLE) device. </Description>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE222004_PSoC6_BLE_MultiSlave.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion>
+</Project>
