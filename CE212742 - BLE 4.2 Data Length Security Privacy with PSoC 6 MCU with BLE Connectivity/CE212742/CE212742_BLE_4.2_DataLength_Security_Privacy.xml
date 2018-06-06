@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE212742_BLE_4.2_DataLength_Security_Privacy" StarterProject="true" WorkspaceName="CE212742.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>Data Length Extension</Keyword>
+  <Keyword>DLE</Keyword>
+  <Keyword>Bluetooth 4.2</Keyword>
+  <Keyword>Throughput</Keyword>
+  <Keyword>LE Secure</Keyword>
+  <Keyword>Link Layer Privacy</Keyword>
+  <Keyword>LL Privacy</Keyword>
+  <Keyword>SC</Keyword>
+  <Description> This example project demonstrates following new Bluetooth 4.2 features: 1. Data Length Extension; 2. LE Secure Connection; 3. Link Layer Privacy;</Description>
+  <ShortDescription>Shows how to use Bluetooth 4.2 features with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE212742.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>
+
