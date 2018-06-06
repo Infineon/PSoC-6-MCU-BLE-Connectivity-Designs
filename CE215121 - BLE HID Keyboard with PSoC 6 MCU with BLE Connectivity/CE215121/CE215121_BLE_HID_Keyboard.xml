@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE215121_BLE_HID_Keyboard" StarterProject="true" WorkspaceName="CE215121.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>HOGP</Keyword>
+  <Keyword>Keyboard</Keyword>
+  <Keyword>HID</Keyword>
+  <Keyword>HIDS</Keyword>
+  <Description> BLE HID keyboard code example that supports both input and output reports in boot and protocol mode. The example also demonstrates handling suspend event from the central device and enters low power mode when suspended. </Description>
+  <ShortDescription>Shows how to use the HID keyboard with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE215121.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>
