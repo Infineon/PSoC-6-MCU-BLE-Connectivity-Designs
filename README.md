@@ -56,12 +56,21 @@ simultaneous Multiple Master and Single Slave modes of operation. The Multi-Mast
 This code example demonstrates the new BLE 4.2 and 5.0 features of the PSoC® Creator™ BLE Component.
 #### 5. CE215119 - BLE Battery Level with PSoC 6 MCU with BLE Connectivity
 This example demonstrates the operation of Bluetooth Low Energy (BLE) Battery Service (BAS) using the BLE_PDL Component. The design implements a Custom Profile in a GATT server and generic attribute profile (GAP) peripheral roles with the Battery and Device Information services. The Battery Service is used for software simulation of the battery level. The simulated battery level value is continuously changed from 2 to 20 percent.
-#### 6 CE215121 - BLE HID Keyboard with PSoC 6 MCU with BLE Connectivity
+#### 6. CE215121 - BLE HID Keyboard with PSoC 6 MCU with BLE Connectivity
 This example demonstrates the implementation of the Bluetooth Low Energy (BLE) HID over GATT Profile where the device operates as a HID keyboard. The design demonstrates the core functionality of the BLE Component configured as a HID Device (GATT Server). It simulates keyboard press in Boot and Protocol modes. Also, the design demonstrates how to handle a suspend event from the central device and enter Low-Power mode when suspended.
-#### 7 CE215122 - BLE HID Mouse with PSoC 6 MCU with BLE Connectivity
+#### 7. CE215122 - BLE HID Mouse with PSoC 6 MCU with BLE Connectivity
 This example demonstrates the implementation of the Bluetooth Low Energy (BLE) HID over GATT Profile where the device operates as a HID Mouse. The design demonstrates the core functionality of the BLE Component configured as a HID Device (GATT Server). It simulates the mouse movement and button click in Boot and Protocol modes. Also, the design demonstrates how to handle a suspend event from the central device and enter Low-Power mode when suspended.
-#### 8 CE215123 - BLE Location and Navigation with PSoC 6 MCU with BLE Connectivity
+#### 8. CE215123 - BLE Location and Navigation with PSoC 6 MCU with BLE Connectivity
 This example project demonstrates the Location and Navigation Pod application workflow. The design demonstrates the core functionality of the Bluetooth Low Energy (BLE) Component configured as a BLE Location and Navigation Service (LNS) device in the GATT Server role. The application uses a BLE Location and Navigation Profile to report location and navigation information to a Client. Also, the Location and Navigation Pod application uses the Battery Service to notify the battery level and the Device Information Service to assert the Device Name and so on.
+#### 9. CE215124 - BLE HTTP Proxy with PSoC 6 MCU with BLE Connectivity
+This example demonstrates the HTTP Proxy Client and Server operation of the Bluetooth Low Energy (BLE) PSoC Creator™ Component. The HTTP Proxy Server and HTTP Proxy Client projects are used as a pair to demonstrate the BLE HTTP Proxy Service (HPS) operation. The HTTP Proxy Server uses one instance of the HTTP Proxy Service to simulate an HTTP Server on the BLE device. Also, the HTTP Proxy Server operates with other devices that implement the HTTP Proxy Client Role. To conserve power, the device switches to Deep Sleep mode between the BLE connection intervals.
+#### 10. CE215555 - BLE Multi Role with PSoC 6 MCU with BLE Connectivity
+This example demonstrates the capability of the PSoC 6 BLE device to be in all Generic Access Profile (GAP) roles (Central,
+Peripheral, Observer, and Broadcaster) simultaneously.
+#### 11. CE217639 - BLE Heart Rate with PSoC 6 MCU with BLE Connectivity 
+This example demonstrates the Heart Rate Client and Server operation of the Bluetooth Low Energy (BLE) PSoC Creator™ Component.
+The Heart Rate Server and Heart Rate Client projects are used in a pair to demonstrate the Heart Rate Service (HRS) operation. The Heart Rate Server project demonstrates the BLE workflow procedures such as advertising, connecting, simulating, and notifying Heart Rate data and Battery Level. To conserve power, the device switches to Deep Sleep mode between the BLE connection intervals.
+The Heart Rate Client project receives Heart Rate data from any BLE-enabled Heart Rate Sensor and indicates that data on any terminal software via a UART.
 
 ## References
 #### 1. PSoC 6 MCU
