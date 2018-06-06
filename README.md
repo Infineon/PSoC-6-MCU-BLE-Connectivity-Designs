@@ -52,7 +52,10 @@ The example consists of two projects: IPSP Router (GAP Central) and IPSP Node (G
 #### 3. CE215118 – BLE Multi-Master Single Slave with PSoC 6 MCU with BLE Connectivity
 This example demonstrates how to configure the PSoC® 6 MCU with Bluetooth Low Energy (BLE) Connectivity device in
 simultaneous Multiple Master and Single Slave modes of operation. The Multi-Master Single Slave project uses three BLE Central connections and one Peripheral connection.
-
+#### 4. CE212742 – BLE 4.2 Data Length Security Privacy with PSoC 6 MCU with BLE Connectivity
+This code example demonstrates the new BLE 4.2 and 5.0 features of the PSoC® Creator™ BLE Component.
+#### 5. CE215119 - BLE Battery Level with PSoC 6 MCU with BLE Connectivity
+This example demonstrates the operation of Bluetooth Low Energy (BLE) Battery Service (BAS) using the BLE_PDL Component. The design implements a Custom Profile in a GATT server and generic attribute profile (GAP) peripheral roles with the Battery and Device Information services. The Battery Service is used for software simulation of the battery level. The simulated battery level value is continuously changed from 2 to 20 percent.
 ## References
 #### 1. PSoC 6 MCU
 PSoC 6 bridges the gap between expensive, power hungry application processors and low‑performance microcontrollers (MCUs). The ultra‑low‑power PSoC 6 MCU architecture offers the processing performance needed by IoT devices, eliminating the tradeoffs between power and performance. The PSoC 6 MCU contains a dual‑core architecture, with both cores on a single chip. It has an Arm® Cortex®‑M4 for high‑performance tasks, and an Arm® Cortex®‑M0+ for low-power tasks, and with security built-in, your IoT system is protected.
