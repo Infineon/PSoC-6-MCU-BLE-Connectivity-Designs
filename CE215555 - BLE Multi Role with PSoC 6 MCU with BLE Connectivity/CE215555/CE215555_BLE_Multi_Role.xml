@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE215555_BLE_Multi_Role" StarterProject="true" WorkspaceName="CE215555.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>Multi Role</Keyword>
+  <Keyword>Multi Connection</Keyword>
+  <Keyword>MMMS</Keyword>
+  <Keyword>LE Topology</Keyword>
+  <Keyword>Central and Peripheral</Keyword>
+  <Keyword>Master and Slave</Keyword>
+  <Keyword>Broadcaster</Keyword>
+  <Keyword>Observer</Keyword>
+  <Description>This code example demonstrates capability of PSoC 6 BLE device to be in all the GAP roles (Central, Peripheral, Observer, and Broadcaster). </Description>
+  <ShortDescription>Shows how to use the Multi Role mode with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE215555.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>
