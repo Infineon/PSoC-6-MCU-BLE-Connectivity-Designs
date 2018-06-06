@@ -71,6 +71,16 @@ Peripheral, Observer, and Broadcaster) simultaneously.
 This example demonstrates the Heart Rate Client and Server operation of the Bluetooth Low Energy (BLE) PSoC Creator™ Component.
 The Heart Rate Server and Heart Rate Client projects are used in a pair to demonstrate the Heart Rate Service (HRS) operation. The Heart Rate Server project demonstrates the BLE workflow procedures such as advertising, connecting, simulating, and notifying Heart Rate data and Battery Level. To conserve power, the device switches to Deep Sleep mode between the BLE connection intervals.
 The Heart Rate Client project receives Heart Rate data from any BLE-enabled Heart Rate Sensor and indicates that data on any terminal software via a UART.
+#### 12. CE217645 - BLE Weight Scale Profile with PSoC 6 MCU with BLE Connectivity
+This example demonstrates how to configure and use BLE Component API functions and application layer callback for the BLE Weight Scale application. The design demonstrates the Weight Scale Profile operation of the BLE Component. The Weight Scale Sensor uses one instance of the Weight Scale Service (WSS), Body Composition Service (BCS), User Data Service (UDS), and Device Information Service (DIS) to simulate weight measurements for up to four registered users. The Weight Scale Sensor operates with other devices that implement the Weight Scale Collector Profile.
+#### 13. CE218044 - BLE Pulse Oximeter with PSoC 6 MCU with BLE Connectivity
+This example demonstrates how to configure and use the Bluetooth Low Energy (BLE) Component APIs and application layer
+callbacks for the Pulse Oximeter Profile (PLXP). This example demonstrates the core functionality of the BLE Component configured as a Pulse Oximeter Service (PLXS) device (GATT Server). The example simulates the PLX Spot-check Measurement and PLX Continuous Measurement
+characteristics. To conserve power, the device switches to Deep Sleep mode between the BLE connection intervals.
+Additionally, this project implements the following services as per the Pulse Oximeter Profile specification: BMS, BAS, DIS,
+and CTS. 
+#### 14. CE222004 – PSoC 6 MCU with BLE Multi-Master Multi-Slave: SSSS Function
+This example demonstrates the implementation of multi-slave functionality of the PSoC® 6 MCU with BLE Connectivity (PSoC 6 BLE) device. The example shows the connectivity between the PSoC 6 BLE, acting as a Peripheral and GATT Server, and four BLE enabled devices (a personal computer running the CySmart BLE Host Emulation tool or mobile device running the CySmart mobile application) acting as a Central and GATT Client
 
 ## References
 #### 1. PSoC 6 MCU
