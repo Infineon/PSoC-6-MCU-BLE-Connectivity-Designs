@@ -19,7 +19,7 @@ If you are new to developing projects with PSoC 6 MCU, we recommend you to refer
 
 For block level examples please refer to the following GitHub repositories:
 
-#### 1. [Analog Designs]
+#### 1. [Analog Designs](https://github.com/cypresssemiconductorco/PSoC-6-MCU-Analog-Designs)
 #### 2. [Digital Designs]
 #### 3. [Audio Designs]
 #### 4. [Device Related Designs]
