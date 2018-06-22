@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE217638_BLE_Glucose_Meter" StarterProject="true" WorkspaceName="CE217638.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>Glucose</Keyword>
+  <Keyword>GLP</Keyword>
+  <Keyword>GLS</Keyword>
+  <Description>Glucose Meter example project reports Glucose measurements via a Glucose Service.</Description>
+  <ShortDescription>Shows how to use the Glucose Meter Service with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE217638.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>

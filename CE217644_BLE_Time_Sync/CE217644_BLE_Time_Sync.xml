@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE217644_BLE_Time_Sync" StarterProject="true" WorkspaceName="CE217644.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>CTS</Keyword>
+  <Keyword>RTC</Keyword>
+  <Keyword>Time</Keyword>
+  <Keyword>RTUS</Keyword>
+  <Keyword>NDCS</Keyword>
+  <Keyword>TIP</Keyword>
+  <Description>BLE Time Sync code example that syncs its initial time from the BLE central device using BLE Current Time service.</Description>
+  <ShortDescription>Shows how to use the Current Time Service with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE217644.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE217640_BLE_Phone_Alert_Client" StarterProject="true" WorkspaceName="CE217640.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>Phone</Keyword>
+  <Keyword>PASP</Keyword>
+  <Keyword>PASS</Keyword>
+  <Keyword>Alert</Keyword>
+  <Description>Example project that depicts the current ringer mode of the Phone Alert server along with ringer and vibrate state on the Phone Alert Client user interface LEDs. User control of phone's alert mode and state from the PASS Client is also demonstrated.</Description>
+  <ShortDescription>Shows how to use the Phone Alert Service with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE217640.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>

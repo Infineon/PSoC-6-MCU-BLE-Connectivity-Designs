@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE217635_BLE_Cycling_Sensor" StarterProject="true" WorkspaceName="CE217635.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>Cycling</Keyword>
+  <Keyword>Cadence</Keyword>
+  <Keyword>CSCP</Keyword>
+  <Keyword>CSCS</Keyword>
+  <Keyword>CPP</Keyword>
+  <Keyword>CPS</Keyword>
+  <Description> Cycling Sensor example project that demonstrates Cycling Speed and Cadence and Cycling Power services. 
+Cycling Speed and Cadence simulates a cycling activity and reports the simulated cycling speed and cadence data to a BLE central device using CSCS.
+Cycling Power simulates cycling power data and reports the simulated data to a BLE central device using CPS. </Description>
+  <ShortDescription>Shows how to use the Cycling Speed and Cadence Service with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE217635.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>
+

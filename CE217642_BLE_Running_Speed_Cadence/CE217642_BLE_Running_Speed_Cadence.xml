@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE217642_BLE_Running_Speed_Cadence" StarterProject="true" WorkspaceName="CE217642.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>RSCP</Keyword>
+  <Keyword>RSCS</Keyword>
+  <Keyword>Running Speed</Keyword>
+  <Keyword>Cadence</Keyword>
+  <Description>This code example demonstrates the Running Speed and Cadence Sensor application workflow.</Description>
+  <ShortDescription>Shows how to use the Running Speed and Cadence Service with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE217642.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>
+

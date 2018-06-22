@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE217637_BLE_Find_Me" StarterProject="true" WorkspaceName="CE217637.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>Alert</Keyword>
+  <Keyword>IAS</Keyword>
+  <Keyword>Find Me</Keyword>
+  <Keyword>FMP</Keyword>
+  <Description>BLE example project that implements Immediate Alert service and acts as a Find Me target device.</Description>
+  <ShortDescription>Shows how to use the Find Me Service with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE217637.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>

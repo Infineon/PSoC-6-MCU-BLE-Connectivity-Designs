@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE217636_BLE_Environmental_Sensing" StarterProject="true" WorkspaceName="CE217636.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>Environmental Sensing</Keyword>
+  <Keyword>Device Information</Keyword>
+  <Keyword>DIS</Keyword>
+  <Keyword>ESS</Keyword>
+  <Keyword>ESP</Keyword>
+  <Description>Simple BLE example project that demonstrates how to configure and use Cypress's BLE component APIs and application layer callback for Environmental Sensing Service (ESS).</Description>
+  <ShortDescription>Shows how to use the Environmental Sensing Service with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE217636.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>
