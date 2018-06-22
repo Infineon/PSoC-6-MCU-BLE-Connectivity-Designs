@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE215118_BLE_Multi_Master_Single_Slave" StarterProject="true" WorkspaceName="CE215118.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>multiple master</Keyword>
+  <Keyword>single slave</Keyword>
+  <Description> This code example demonstrates how to configure PSoC 6 BLE device in simultaneous multiple master and single slave mode of operation. </Description>
+  <ShortDescription>Shows how to use multiple master and single slave modes with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE215118.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>
