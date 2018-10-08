@@ -44,6 +44,46 @@ To use the code examples in this repository, please download and install
 ## Code Example List
 #### 1. CE212736 - PSoC 6 MCU with BLE Connectivity - Find ME
 This code example demonstrates the implementation of a simple BLE Immediate Alert Service (IAS)-based Find Me profile using PSoC 6 MCU with BLE Connectivity.
+#### 2. CE212741 - IPSP Router and Node
+This example demonstrates the operation of the Internet Protocol Support Profile (IPSP) with the Bluetooth Low Energy (BLE_PDL) Component.
+#### 3. CE212742 - BLE 4.2 Data Length Security Privacy with PSoC 6 MCU with BLE Connectivity
+This code example demonstrates the new BLE 4.2 and 5.0 features of the PSoC® Creator BLE Component.
+#### 4. CE215118 - BLE_Multi Master Single Slave
+This example demonstrates how to configure the PSoC 6 MCU with Bluetooth Low Energy (BLE) Connectivity device in
+simultaneous Multiple Master and Single Slave modes of operation.
+#### 5. CE215119 - BLE Battery Level
+This example demonstrates the operation of Bluetooth Low Energy (BLE) Battery Service (BAS) using the BLE_PDL
+Component.
+#### 6. CE215120 - BLE Device Information Service
+This example project demonstrates how to configure and use the Bluetooth Low Energy (BLE) Component APIs and an
+application layer callback.
+#### 7. CE215121 - BLE HID Keyboard
+This example demonstrates the implementation of the Bluetooth Low Energy (BLE) HID over GATT Profile where the device operates as a HID keyboard.
+#### 8. CE215122 - BLE HID Mouse
+This example demonstrates the implementation of the Bluetooth Low Energy (BLE) HID over GATT Profile where the device operates as a HID Mouse.
+#### 9. CE215123 - BLE Navigation
+The design demonstrates the core functionality of the Bluetooth Low Energy (BLE) Component configured as a BLE Location and Navigation Service (LNS) device
+in the GATT Server role. The application uses a BLE Location and Navigation Profile to report location and navigation information to a Client. Also, the Location
+and Navigation Pod application uses the Battery Service to notify the battery level and the Device Information Service to assert the Device Name and so on.
+#### 10. CE215124 - BLE HTTP Proxy
+This example demonstrates the HTTP Proxy Client and Server operation of the Bluetooth Low Energy (BLE) PSoC Creator Component.
+#### 11. CE215555 - BLE Multi Role
+This example demonstrates the capability of the PSoC 6 BLE device to be in all Generic Access Profile (GAP) roles (Central,
+Peripheral, Observer, and Broadcaster) simultaneously.
+#### 12. CE217631 - BLE Alert Notification
+This example project demonstrates the Alert Notification Client operation of the BLE PSoC Creator Component. The Alert
+Notification Client uses the BLE Alert Notification Profile with one instance of the Alert Notification Service to receive information
+about Email, missed call, and SMS/MMS alerts from the Alert Notification Server. The device remains in Sleep mode between
+the BLE connection intervals.
+#### 13. CE217632 BLE Apple Notification Client
+The design demonstrates the core functionality of the BLE Component configured as a BLE Apple Notification Service (ANCS) device in the
+GATT Client role. The application uses the BLE Apple Notification Center Service in the GATT Client mode to communicate with a BLE Apple 
+Notification Center Server (iPhone, iPod, and so on).
+#### 14. CE217633 - BLE Blood Pressure Sensor
+This example project demonstrates the BLE Blood Pressure Sensor application workflow. The Blood Pressure Sensor
+application uses the BLE Blood Pressure profile to report blood pressure measurement records to a client. Also, the Blood
+Pressure Sensor application uses the Battery Service to notify the Battery Level and the Device Information services to assert
+the Device Name and so on.
 
 ## References
 #### 1. PSoC 6 MCU
