@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE215120_BLE_Device_Information_Service" StarterProject="true" WorkspaceName="CE215120.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>DIS</Keyword>
+  <Keyword>Device Information</Keyword>
+  <Description>This simple BLE code example demonstrates how to configure and use Cypress's BLE component APIs and application layer callback. Device Information service is used as an example to demonstrate configuring BLE service characteristics in the BLE component. </Description>
+  <ShortDescription>Shows how to use the Device Information Service with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE215120.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>
