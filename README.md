@@ -109,6 +109,56 @@ This example demonstrates the Heart Rate Client and Server operation of the Blue
 #### 21. CE217640 - BLE Phone Alert
 This code example demonstrates the current Ringer mode of the Phone Alert Server (a phone or CY8CKIT-062 PSoC 6 BLE Pioneer Kit)
 and the Ringer and Vibrate states on the user interface LEDs of the Phone Alert Client on the CY8CKIT-062 PSoC 6 BLE Pioneer Kit).
+#### 22. CE217641 - BLE Proximity Profile
+This example project demonstrates the Proximity operation of the BLE PSoC Creator Component. The Proximity Reporter
+uses the BLE Proximity Profile with one instance of the Link Loss Service and one instance of the Tx Power Service to display
+alerts on the device if connection to the client is lost. The Proximity Reporter operates with other devices which implement the
+Proximity Monitor Profile role. The device uses Limited Discovery mode during which it is visible to the BLE clients. The device
+remains in Deep Sleep mode between the BLE connection intervals.
+#### 23. CE217642 - BLE Running Speed Cadence
+The design demonstrates the core functionality of the BLE Component configured as the Running Speed and Cadence Sensor (RSCS)
+device in the GATT Server role. The device simulates running/walking data measurements and sends them over the BLE Running Speed
+and Cadence Service
+#### 24. CE217643 - BLE Temperature Measurement 
+This example demonstrates the Health Thermometer Profile operation of the BLE Component. The device simulates
+thermometer readings and sends it over to the BLE Health Thermometer Service. It also simulates a battery level value and
+sends it over to the BLE Battery Service.
+#### 25. CE217644 - BLE Time Sync
+This example demonstrates the Current Time Service (CTS) in GATT Client and GAP Peripheral role.
+#### 26. CE217645 - BLE Weight Scale
+The design demonstrates the Weight Scale Profile operation of the BLE Component. The Weight Scale Sensor uses one instance of the
+Weight Scale Service (WSS), Body Composition Service (BCS), User Data Service (UDS), and Device Information Service (DIS) to simulate
+weight measurements for up to four registered users. The Weight Scale Sensor operates with other devices that implement the Weight Scale 
+Collector Profile.
+#### 27. CE217646 - BLE Wireless Power Receiver Transmitter
+This example demonstrates the Wireless Power Transfer service in the Power Transmitter Unit and Power Receiver Unit role.
+#### 28. CE217647 - BLE Indoor Positioning
+This Bluetooth Low Energy (BLE) example project demonstrates how to create an indoor navigation system using the BLE broadcasting
+mode that can be configured over a GATT connection.
+#### 29. CE218044 - BLE Pulse Oximeter Sensor
+This example demonstrates how to configure and use the Bluetooth Low Energy (BLE) Component APIs and application layer
+callbacks for the Pulse Oximeter Profile (PLXP).
+#### 30. CE220272 - BLE Direct Test Mode
+This code example demonstrates Direct Test Mode (DTM) over the Host Controller Interface (HCI) using PSoC 6 MCU with
+Bluetooth Low Energy (BLE) Connectivity.
+#### 31. CE220959 - Bootloader BLE External Memory
+This example demonstrates over the air (OTA) bootloading with a PSoC® 6 MCU with Bluetooth Low Energy (BLE) connectivity using an 
+external memory. The application is downloaded into the external memory, verified, and afterwards copied into the internal flash 
+memory for execution.
+#### 32. CE220960 - Bootloader BLE Upgradable Stack
+This example demonstrates over the air (OTA) bootloading with a PSoC® 6 MCU with Bluetooth Low Energy (BLE) connectivity. 
+The BLE stack code is shared between applications to reduce flash usage. The bootloader may download updates to the BLE stack or to the application.
+#### 33. CE222046 - BLE Throughput Measurement
+This code example demonstrates how to maximize the BLE throughput on PSoC® 6 MCU with Bluetooth Low Energy (BLE)
+Connectivity device.
+#### 34. CE223508 - PSoC6 BLE Four Slaves RTOS
+This example demonstrates the implementation of multi-slave functionality of the PSoC 6 MCU with BLE Connectivity (PSoC 6
+BLE) device.
+#### 35. CE224714 - PSoC6 BLE Three Masters One Slave RTOS
+This example demonstrates how to configure the PSoC 6 MCU with Bluetooth Low Energy Connectivity (PSoC 6 BLE) device
+in simultaneous Multiple Master and Single Slave modes of operation.
+#### 36. CE224856 - BLE LP Beacon Hibernate RTOS
+This code example demonstrates a Bluetooth Low Energy (BLE) beacon that goes into Hibernate mode once the specified active time has elapsed.
 
 ## References
 #### 1. PSoC 6 MCU
