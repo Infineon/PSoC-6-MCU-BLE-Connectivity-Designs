@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE217647_BLE_Indoor_Positioning" StarterProject="true" WorkspaceName="CE217647.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>IPS</Keyword>
+  <Keyword>Indoor Positioning</Keyword>
+    <Description>This BLE example project demonstrates how to create an indoor navigation system using the BLE broadcasting mode that can be configured over a GATT connection.</Description>
+  <ShortDescription>Shows how to use the Indoor Positioning Service with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE217647.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>
+

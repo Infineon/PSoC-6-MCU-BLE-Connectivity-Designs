@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE217646_BLE_Wireless_Power_Receiver" StarterProject="true" WorkspaceName="CE217646.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>Wireless Power</Keyword>
+  <Keyword>Power</Keyword>
+  <Description> Wireless Power Transmitter and Receiver code example that demonstrates Wireless Power Transfer service in the Client and Server role.</Description>
+  <ShortDescription>Shows how to use the Wireless Power Transfer Service with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE217646.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>
+

@@ -1,0 +1,206 @@
+/***************************************************************************//**
+* \file bootload_common.icf
+* \version 2.10
+*
+* The common linker configuration file for the IAR compiler.
+* Used by Bootloader SDK code examples.
+*
+* \note The entry point is fixed and starts at 0x10000000. The valid application
+* image should be placed there.
+*
+* \note The linker files included with the PDL template projects must be generic
+* and handle all common use cases. Your project may not use every section
+* defined in the linker files. In that case, you may see warnings during the
+* build process. In your project, you can simply comment out or remove the
+* relevant code in the linker file.
+*
+********************************************************************************
+* \copyright
+* Copyright 2016-2018, Cypress Semiconductor Corporation.  All rights reserved.
+* You may use this file only in accordance with the license, terms, conditions,
+* disclaimers, and limitations in the end user license agreement accompanying
+* the software package with which this file was provided.
+*******************************************************************************/
+
+/* The following symbol is used to rearrange the RAM and FLASH memory depending */
+/* on the core running the BLE Component. (BLE_CM0, BLE_CM4, BLE_DUAL) */
+define symbol BLE_CM4 = 1;
+
+/*-Memory Regions-*/
+/* Flash */
+define exported symbol __cy_memory_0_start    = 0x10000000;
+define exported symbol __cy_memory_0_length   = 0x00100000;
+define exported symbol __cy_memory_0_row_size = 0x200;
+
+/* Emulated EEPROM Flash area */
+define exported symbol __cy_memory_1_start    = 0x14000000;
+define exported symbol __cy_memory_1_length   = 0x8000;
+define exported symbol __cy_memory_1_row_size = 0x200;
+
+/* Supervisory Flash */
+define exported symbol __cy_memory_2_start    = 0x16000000;
+define exported symbol __cy_memory_2_length   = 0x8000;
+define exported symbol __cy_memory_2_row_size = 0x200;
+
+/* XIP */
+define exported symbol __cy_memory_3_start    = 0x18000000;
+define exported symbol __cy_memory_3_length   = 0x08000000;
+define exported symbol __cy_memory_3_row_size = 0x200;
+
+/* eFuse */
+define exported symbol __cy_memory_4_start    = 0x90700000;
+define exported symbol __cy_memory_4_length   = 0x100000;
+define exported symbol __cy_memory_4_row_size = 1;
+
+
+define memory mem with size = 4G;
+
+/* Memory regions for all applications are defined here */
+define region FLASH_app0_core0  = mem:[from 0x10000000 size 0x03000];
+define region FLASH_app0_core1  = mem:[from 0x10003000 size 0x02000];
+
+/* FLASH partitioning depends on which core runs the BLE Component */
+if(isdefinedsymbol(BLE_CM4)) 
+{
+    define region FLASH_app1_core0  = mem:[from 0x10005000 size 0x03000];
+    define region FLASH_app1_core1  = mem:[from 0x10008000 size 0x2F000];
+    define region FLASH_app2_core0  = mem:[from 0x10040000 size 0x03400];
+    define region FLASH_app2_core1  = mem:[from 0x10043400 size 0x08000];
+} 
+else if(isdefinedsymbol(BLE_CM0))
+{
+    define region FLASH_app1_core0  = mem:[from 0x10005000 size 0x2F000];
+    define region FLASH_app1_core1  = mem:[from 0x10034000 size 0x02000];
+    define region FLASH_app2_core0  = mem:[from 0x10040000 size 0x08000];
+    define region FLASH_app2_core1  = mem:[from 0x10048000 size 0x02000];
+}
+else if(isdefinedsymbol(BLE_DUAL))
+{
+    define region FLASH_app1_core0  = mem:[from 0x10005000 size 0x19400];
+    define region FLASH_app1_core1  = mem:[from 0x1001E400 size 0x1A000];
+    define region FLASH_app2_core0  = mem:[from 0x10040000 size 0x03000];
+    define region FLASH_app2_core1  = mem:[from 0x10043000 size 0x07800];
+}
+
+/*
+* The region for Bootloader SDK metadata
+* when it is outside of any application
+*/
+define region FLASH_boot_meta   = mem:[from 0x100FFA00 size 0x200];
+
+/* Flash row to store the copy flag variable */
+define region FLASH_boot_copy   = mem:[from 0x100FF800 size 0x200];
+
+/* eFuse */
+define region ROM_EFUSE         = mem:[from 0x90700000 size 0x100000];
+
+/* SFlash NAR */
+define region SFLASH_NAR        = mem:[from 0x16001A00 size 0x200];
+
+/* SFlash User Data */
+define region SFLASH_USER_DATA  = mem:[from 0x16000800 size 0x800];
+
+/* SFlash Public Key, 6 SFlash rows */
+define region SFLASH_PUBLIC_KEY = mem:[from 0x16005A00 size 0xC00];
+
+/* Table of Content part 2, two SFlash rows */
+define region SFLASH_TOC        = mem:[from 0x16007C00 size 0x400];
+
+
+/* Emulated EEPROM app regions */
+define region EM_EEPROM_app0_core0 = mem:[from 0x14000000 size 0x8000];
+define region EM_EEPROM_app0_core1 = mem:[from 0x14000000 size 0x8000];
+define region EM_EEPROM_app1_core0 = mem:[from 0x14000000 size 0x8000];
+define region EM_EEPROM_app1_core1 = mem:[from 0x14000000 size 0x8000];
+define region EM_EEPROM_app2_core0 = mem:[from 0x14000000 size 0x8000];
+define region EM_EEPROM_app2_core1 = mem:[from 0x14000000 size 0x8000];
+
+/* XIP/SMIF app regions */
+define region   EROM_app0_core0 = mem:[from 0x18000000 size 0x1000];
+define region   EROM_app0_core1 = mem:[from 0x18000000 size 0x1000];
+define region   EROM_app1_core0 = mem:[from 0x18000000 size 0x1000];
+define region   EROM_app1_core1 = mem:[from 0x18000000 size 0x1000];
+define region   EROM_app2_core0 = mem:[from 0x18000000 size 0x1000];
+define region   EROM_app2_core1 = mem:[from 0x18000000 size 0x1000];
+
+/* used for RAM sharing across applications */
+define region IRAM_common       = mem:[from 0x08000000 size 0x0100];
+
+/* note: all the IRAM_appX_core0 regions has to be 0x100 aligned */
+/* and the IRAM_appX_core1 regions has to be 0x400 aligned       */
+/* as they contain Interrupt Vector Table Remapped at the start */
+define region   IRAM_app0_core0 = mem:[from 0x08000100 size 0x1F00];
+define region   IRAM_app0_core1 = mem:[from 0x08002000 size 0x8000];
+
+/* The BLE Stack RAM data must be reserved and reinitialized by App2 */
+/* In order to save RAM, the STACK and HEAP of App1 are place somewhere */
+/* where it can be overwritten. Some common configuration variables must be */
+/* updated by App2, these are placed in a specific section for this purpose */
+if(isdefinedsymbol(BLE_CM4)) 
+{
+    define region   IRAM_config_core1 = mem:[from 0x08000100 size 0x0300];
+    /* Core0 RAM region is placed after Core1 because it can be overwritten by App2 */
+    define region   IRAM_app1_core1 = mem:[from 0x08000400 size 0x2C00];
+    define region   IRAM_app1_core0 = mem:[from 0x08003000 size 0x0800];
+    define region   STACKHEAP_core0 = mem:[from 0x08003800 size 0x1400];
+    define region   STACKHEAP_core1 = mem:[from 0x08004C00 size 0x5000];
+    define region   IRAM_app2_core0 = mem:[from 0x08003000 size 0x1D000];
+    define region   IRAM_app2_core1 = mem:[from 0x08020000 size 0x27800];
+} 
+else if(isdefinedsymbol(BLE_CM0))
+{
+    define region   IRAM_config_core0 = mem:[from 0x08000100 size 0x0300];
+    define region   IRAM_app1_core0 = mem:[from 0x08000400 size 0x2400];
+    define region   IRAM_app1_core1 = mem:[from 0x08002800 size 0x1000];
+    define region   STACKHEAP_core0 = mem:[from 0x08003800 size 0x5000];
+    define region   STACKHEAP_core1 = mem:[from 0x08008800 size 0x1400];
+    define region   IRAM_app2_core0 = mem:[from 0x08002800 size 0x1D800];
+    define region   IRAM_app2_core1 = mem:[from 0x08020000 size 0x27800];
+}
+else if(isdefinedsymbol(BLE_DUAL))
+{
+    define region   IRAM_config_core0 = mem:[from 0x08000100 size 0x0300];
+    define region   IRAM_config_core1 = mem:[from 0x08000400 size 0x0300];
+    define region   IRAM_app1_core0 = mem:[from 0x08000700 size 0x1500];
+    define region   IRAM_app1_core1 = mem:[from 0x08001C00 size 0x2400];
+    define region   STACKHEAP_core0 = mem:[from 0x08004000 size 0x3500];
+    define region   STACKHEAP_core1 = mem:[from 0x08007500 size 0x5000];
+    define region   IRAM_app2_core0 = mem:[from 0x08004000 size 0x1C000];
+    define region   IRAM_app2_core1 = mem:[from 0x08020000 size 0x27800];
+}
+
+/* Used by all Bootloader SDK and CyMCUElfTool */
+define exported symbol __cy_boot_metadata_addr               = 0x100FFA00;
+define exported symbol __cy_boot_metadata_length             = __cy_memory_0_row_size;
+
+/* Used by CyMCUElfTool to generate ProductID for Bootloader SDK apps */
+define exported symbol __cy_product_id                       = 0x01020304;
+
+/* Used by CyMCUElfTool to generate ChecksumType forBootloader SDK apps */
+define exported symbol __cy_checksum_type                    = 0;
+
+/*
+* The size of the application signature.
+* E.g. 4 for CRC-32,
+*     32 for SHA256,
+*    256 for RSA 2048.
+*/
+define exported symbol __cy_boot_signature_size = 4;
+
+/* Used by the bootloader to set the copy flag */
+define exported symbol __cy_boot_copy_addr = start(FLASH_boot_copy);
+
+/* Used by Bootloader SDK projects, in bootload_user.c to fill in the metadata table */
+define exported symbol __cy_app0_verify_start = start(FLASH_app0_core0);
+define exported symbol __cy_app0_verify_length = size (FLASH_app0_core0) + size (FLASH_app0_core1) 
+                                                 - __cy_boot_signature_size;
+
+define exported symbol __cy_app1_verify_start = start(FLASH_app1_core0);
+define exported symbol __cy_app1_verify_length = size (FLASH_app1_core0) + size (FLASH_app1_core1)
+                                                 - __cy_boot_signature_size;
+
+define exported symbol __cy_app2_verify_start = start(FLASH_app2_core0);
+define exported symbol __cy_app2_verify_length = size (FLASH_app2_core0) + size (FLASH_app2_core1)
+                                                 - __cy_boot_signature_size;
+
+/* [] END OF FILE */

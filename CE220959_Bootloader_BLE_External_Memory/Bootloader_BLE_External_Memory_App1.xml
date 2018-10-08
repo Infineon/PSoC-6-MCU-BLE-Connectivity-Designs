@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="Bootloader_BLE_External_Memory_App1" WorkspaceName="CE220959.cywrk">
+<Version>1.0</Version>
+<Keyword>PSoC6</Keyword>
+<Keyword>Bluetooth</Keyword>
+<Keyword>BLE</Keyword>
+<Keyword>Bootloader</Keyword>
+<Keyword>Over the air</Keyword>
+<Keyword>OTA</Keyword>
+<Keyword>External memory</Keyword>
+<Keyword>SMIF</Keyword>
+<Keyword>SMIF_PDL</Keyword>
+<Keyword Hidden="true">CY8CKIT-062-BLE</Keyword>
+<Description>This example demonstrates over the air (OTA) bootloading with a PSoC 6 MCU with Bluetooth Low Energy (BLE) connectivity using an external memory. The application is downloaded into the external memory, verified, and afterwards copied into the internal flash memory for execution.</Description>
+<DeviceFilter>PSoC 63</DeviceFilter>
+<Document>CE220959.pdf</Document>
+<MinToolVersion>4.2</MinToolVersion>
+</Project>

@@ -1,0 +1,135 @@
+/***************************************************************************//**
+* \file bootload_common.icf
+* \version 2.10
+*
+* The common linker configuration file for the IAR compiler.
+* Used by Bootloader SDK code examples.
+*
+* \note The entry point is fixed and starts at 0x10000000. The valid application
+* image should be placed there.
+*
+* \note The linker files included with the PDL template projects must be generic
+* and handle all common use cases. Your project may not use every section
+* defined in the linker files. In that case, you may see warnings during the
+* build process. In your project, you can simply comment out or remove the
+* relevant code in the linker file.
+*
+********************************************************************************
+* \copyright
+* Copyright 2016-2018, Cypress Semiconductor Corporation.  All rights reserved.
+* You may use this file only in accordance with the license, terms, conditions,
+* disclaimers, and limitations in the end user license agreement accompanying
+* the software package with which this file was provided.
+*******************************************************************************/
+
+/*-Memory Regions-*/
+/* Flash */
+define exported symbol __cy_memory_0_start    = 0x10000000;
+define exported symbol __cy_memory_0_length   = 0x00100000;
+define exported symbol __cy_memory_0_row_size = 0x200;
+
+/* Emulated EEPROM Flash area */
+define exported symbol __cy_memory_1_start    = 0x14000000;
+define exported symbol __cy_memory_1_length   = 0x8000;
+define exported symbol __cy_memory_1_row_size = 0x200;
+
+/* Supervisory Flash */
+define exported symbol __cy_memory_2_start    = 0x16000000;
+define exported symbol __cy_memory_2_length   = 0x8000;
+define exported symbol __cy_memory_2_row_size = 0x200;
+
+/* XIP */
+define exported symbol __cy_memory_3_start    = 0x18000000;
+define exported symbol __cy_memory_3_length   = 0x08000000;
+define exported symbol __cy_memory_3_row_size = 0x200;
+
+/* eFuse */
+define exported symbol __cy_memory_4_start    = 0x90700000;
+define exported symbol __cy_memory_4_length   = 0x100000;
+define exported symbol __cy_memory_4_row_size = 1;
+
+
+define memory mem with size = 4G;
+
+/* Memory regions for all applications are defined here */
+define region FLASH_app0_core0  = mem:[from 0x10000000 size 0x10000];
+define region FLASH_app0_core1  = mem:[from 0x10010000 size 0x30000];
+define region FLASH_app1_core0  = mem:[from 0x10040000 size 0x32000];
+define region FLASH_app1_core1  = mem:[from 0x10072000 size 0x02000];
+
+/*
+* The region for Bootloader SDK metadata
+* when it is outside of any application
+*/
+define region FLASH_boot_meta   = mem:[from 0x100FFA00 size 0x200];
+
+
+/* eFuse */
+define region ROM_EFUSE         = mem:[from 0x90700000 size 0x100000];
+
+/* SFlash NAR */
+define region SFLASH_NAR        = mem:[from 0x16001A00 size 0x200];
+
+/* SFlash User Data */
+define region SFLASH_USER_DATA  = mem:[from 0x16000800 size 0x800];
+
+/* SFlash Public Key, 6 SFlash rows */
+define region SFLASH_PUBLIC_KEY = mem:[from 0x16005A00 size 0xC00];
+
+/* Table of Content part 2, two SFlash rows */
+define region SFLASH_TOC        = mem:[from 0x16007C00 size 0x400];
+
+
+/* Emulated EEPROM app regions */
+define region EM_EEPROM_app0_core0 = mem:[from 0x14000000 size 0x8000];
+define region EM_EEPROM_app0_core1 = mem:[from 0x14000000 size 0x8000];
+define region EM_EEPROM_app1_core0 = mem:[from 0x14000000 size 0x8000];
+define region EM_EEPROM_app1_core1 = mem:[from 0x14000000 size 0x8000];
+
+/* XIP/SMIF app regions */
+define region   EROM_app0_core0 = mem:[from 0x18000000 size 0x1000];
+define region   EROM_app0_core1 = mem:[from 0x18000000 size 0x1000];
+define region   EROM_app1_core0 = mem:[from 0x18000000 size 0x1000];
+define region   EROM_app1_core1 = mem:[from 0x18000000 size 0x1000];
+
+/* used for RAM sharing across applications */
+define region IRAM_common       = mem:[from 0x08000000 size 0x0100];
+
+/* note: all the IRAM_appX_core0 regions has to be 0x100 aligned */
+/* and the IRAM_appX_core1 regions has to be 0x400 aligned       */
+/* as they contain Interrupt Vector Table Remapped at the start */
+define region   IRAM_app0_core0 = mem:[from 0x08000100 size 0x1F00];
+define region   IRAM_app0_core1 = mem:[from 0x08002000 size 0x8000];
+define region   IRAM_app1_core0 = mem:[from 0x08000100 size 0x1FF00];
+define region   IRAM_app1_core1 = mem:[from 0x08020000 size 0x20000];
+
+
+/* Used by all Bootloader SDK and CyMCUElfTool */
+define exported symbol __cy_boot_metadata_addr               = 0x100FFA00;
+define exported symbol __cy_boot_metadata_length             = __cy_memory_0_row_size;
+
+/* Used by CyMCUElfTool to generate ProductID for Bootloader SDK apps */
+define exported symbol __cy_product_id                       = 0x01020304;
+
+/* Used by CyMCUElfTool to generate ChecksumType forBootloader SDK apps */
+define exported symbol __cy_checksum_type                    = 0;
+
+/*
+* The size of the application signature.
+* E.g. 4 for CRC-32,
+*     32 for SHA256,
+*    256 for RSA 2048.
+*/
+define exported symbol __cy_boot_signature_size = 4;
+
+/* Used by Bootloader SDK projects, in bootload_user.c to fill in the metadata table */
+define exported symbol __cy_app0_verify_start = start(FLASH_app0_core0);
+define exported symbol __cy_app0_verify_length = size (FLASH_app0_core0) + size (FLASH_app0_core1) 
+                                                 - __cy_boot_signature_size;
+
+define exported symbol __cy_app1_verify_start = start(FLASH_app1_core0);
+define exported symbol __cy_app1_verify_length = size (FLASH_app1_core0) + size (FLASH_app1_core1)
+                                                 - __cy_boot_signature_size;
+
+
+/* [] END OF FILE */

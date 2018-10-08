@@ -1,0 +1,150 @@
+/***************************************************************************//**
+* \file bootload_cm4.icf
+* \version 2.10
+*
+* Linker file for the IAR compiler.
+*
+* \note The entry point is fixed and starts at 0x10000000. The valid application
+* image should be placed there.
+*
+* \note The linker files included with the PDL template projects must be generic
+* and handle all common use cases. Your project may not use every section
+* defined in the linker files. In that case you may see warnings during the
+* build process. In your project, you can simply comment out or remove the
+* relevant code in the linker file.
+*
+********************************************************************************
+* \copyright
+* Copyright 2016-2018, Cypress Semiconductor Corporation.  All rights reserved.
+* You may use this file only in accordance with the license, terms, conditions,
+* disclaimers, and limitations in the end user license agreement accompanying
+* the software package with which this file was provided.
+*******************************************************************************/
+
+/*-Editor annotation file-*/
+/* IcfEditorFile="$TOOLKIT_DIR$\config\ide\IcfEditor\cortex_v1_4.xml" */
+
+
+/* Bootloader SDK specific: includes common linker script data */
+include "bootload_common.icf";
+
+/* CyMCUElfTool uses this symbol to set a proper app number */
+define exported symbol __cy_app_id               = 3;
+
+/* CyMCUElfTool uses these to generate an application signature */
+/* The size of the default signature (CRC-32C) is 4 bytes */
+define exported symbol __cy_app_verify_start  = start(FLASH_app1_core0);
+define exported symbol __cy_app_verify_length =  size(FLASH_app1_core0) + size(FLASH_app1_core1) 
+                                                                        - __cy_boot_signature_size;
+
+
+/*-Sizes-*/
+if (!isdefinedsymbol(__STACK_SIZE)) {
+  define symbol __ICFEDIT_size_cstack__ = 0x1000;
+} else {
+  define symbol __ICFEDIT_size_cstack__ = __STACK_SIZE;
+}
+define symbol __ICFEDIT_size_proc_stack__ = 0x0;
+if (!isdefinedsymbol(__HEAP_SIZE)) {
+    define symbol __ICFEDIT_size_heap__ = 0x0400;
+} else {
+  define symbol __ICFEDIT_size_heap__ = __HEAP_SIZE;
+}
+
+
+define region IROM1_region =  FLASH_app1_core1;    /* Flash, user app   */
+define region IROM2_region = EM_EEPROM_app1_core1; /* Emulated EEPROM   */
+define region IROM3_region = SFLASH_USER_DATA;     /* SFlash User Data  */
+define region IROM4_region = SFLASH_NAR;           /* SFlash NAR        */
+define region IROM5_region = SFLASH_PUBLIC_KEY;    /* SFlash Public Key */
+define region IROM6_region = SFLASH_TOC;           /* SFlash TOC part 2 */
+define region IROM7_region = ROM_EFUSE;            /* eFuse */
+define region EROM1_region =   EROM_app1_core1;    /* XIP / SMIF */
+define region IRAM1_region =   IRAM_app1_core1;    /* RAM */
+
+
+define block CSTACK     with alignment = 8, size = __ICFEDIT_size_cstack__     { };
+define block PROC_STACK with alignment = 8, size = __ICFEDIT_size_proc_stack__ { };
+define block HEAP       with alignment = 8, size = __ICFEDIT_size_heap__       { };
+define block HSTACK {block HEAP, block PROC_STACK, last block CSTACK};
+if(isdefinedsymbol(BLE_CM4) || isdefinedsymbol(BLE_DUAL)) {
+    define block CONFIG_DATA with fixed order 
+    {
+        readwrite object system_psoc63_cm4.o,
+        readwrite object cy_ipc_sema.o,
+        readwrite object cy_ipc_config.o,
+        readwrite object cy_ipc_pipe.o,
+    };
+}
+define block RO     {first section .intvec, readonly};
+
+
+
+/*-Initializations-*/
+initialize by copy { readwrite };
+do not initialize  { section .noinit, section .intvec_ram,
+                     section .cy_boot_noinit.appId, section .cy_boot_noinit };
+
+
+/*-Placement-*/
+
+/* Flash */
+place at start of IROM1_region  { block RO };
+".cy_app_signature": place at end of IROM1_region { section .cy_app_signature };
+
+/* Emulated EEPROM Flash area */
+".cy_em_eeprom" : place at start of IROM2_region  { section .cy_em_eeprom };
+
+/* Supervisory Flash - User Data */
+".cy_sflash_user_data" : place at start of IROM3_region  { section .cy_sflash_user_data };
+
+/* Supervisory Flash - NAR */
+".cy_sflash_nar" : place at start of IROM4_region  { section .cy_sflash_nar };
+
+/* Supervisory Flash - Public Key */
+".cy_sflash_public_key" : place at start of IROM5_region  { section .cy_sflash_public_key };
+
+/* Supervisory Flash - TOC2 */
+".cy_toc_part2" : place at start of IROM6_region  { section .cy_toc_part2 };
+
+/* eFuse */
+".cy_efuse" : place at start of IROM7_region  { section .cy_efuse };
+
+/* Execute in Place (XIP). See the smif driver documentation for details. */
+".cy_xip" : place at start of EROM1_region  { section .cy_xip };
+
+/* RAM */
+place at start of IRAM_common   { readwrite section .cy_boot_noinit.appId };
+place in          IRAM_common   { readwrite section .cy_boot_noinit };
+place in          STACKHEAP_core1 { block HSTACK };
+
+if(isdefinedsymbol(BLE_CM4) || isdefinedsymbol(BLE_DUAL)) {
+place in          IRAM_config_core1 { block CONFIG_DATA };
+}
+
+place at start of IRAM1_region  { readwrite section .intvec_ram};
+place in          IRAM1_region  { readwrite };
+
+
+/* These sections are used for additional metadata (silicon revision, Silicon/JTAG ID, etc.) storage. */
+".cymeta" : place at address mem : 0x90500000 { readonly section .cymeta };
+
+/* App0 uses it to initialize Bootloader SDK metadata, in the bootload_user.c file */
+".cy_boot_metadata" : place at start of FLASH_boot_meta { section .cy_boot_metadata };
+
+keep {  section .cy_app_signature,
+        section .cy_em_eeprom,
+        section .cy_sflash_user_data,
+        section .cy_sflash_nar,
+        section .cy_sflash_public_key,
+        section .cy_sflash_toc_2,
+        section .cy_efuse,
+        section .cy_xip,
+        section .cymeta,
+        section .cy_boot_metadata,
+        section .cy_boot_noinit,
+        section .cy_boot_noinit.appId,
+         };
+
+
+/* EOF */

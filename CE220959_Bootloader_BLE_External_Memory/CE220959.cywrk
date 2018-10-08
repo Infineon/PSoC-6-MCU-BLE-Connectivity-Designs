@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="CE220959" persistent="CE220959.cywrk" platform="NOT_USED">
+<current_project name=".\Bootloader_BLE_External_Memory_App0.cydsn\Bootloader_BLE_External_Memory_App0.cyprj" />
+<wrkspc_folders />
+<files />
+<projects>
+<v>.\Bootloader_BLE_External_Memory_App0.cydsn\Bootloader_BLE_External_Memory_App0.cyprj</v>
+<v>.\Bootloader_BLE_External_Memory_App1.cydsn\Bootloader_BLE_External_Memory_App1.cyprj</v>
+</projects>
+<workspace_id v="8f5cc8dd-2f8a-4fa4-a3d2-8d9178955fd8" />
+<WriteAppVersionLastSavedWith v="4.2.0.574" />
+<WriteAppMarketingVersionLastSavedWith v="4.2" />
+<CyGuid_dcbd9771-0334-43dc-9cc3-fe99dc3c5316 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize+CyPrjDependencyList" version="4">
+<wrkspc_dependencies />
+</CyGuid_dcbd9771-0334-43dc-9cc3-fe99dc3c5316>
+<CyGuid_63b68103-67f5-4406-8da6-5c8625765b82 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize+CyIgnoredSystemDepsList" version="1">
+<wrkspc_dependencies />
+</CyGuid_63b68103-67f5-4406-8da6-5c8625765b82>
+</CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd>
+</CyXmlSerializer>

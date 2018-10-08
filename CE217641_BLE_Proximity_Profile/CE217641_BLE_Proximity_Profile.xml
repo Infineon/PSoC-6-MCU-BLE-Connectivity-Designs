@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE217641_BLE_Proximity_Profile" StarterProject="true" WorkspaceName="CE217641.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>Proximity</Keyword>
+  <Keyword>PXP</Keyword>
+  <Description>This code example demonstrates the BLE Proximity Profile application workflow.</Description>
+  <ShortDescription>Shows how to use the Proximity Profile with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE217641.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>
+

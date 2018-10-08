@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="Bootloader_BLE_Upgradable_Stack_App1" WorkspaceName="CE220960.cywrk">
+<Version>1.0</Version>
+<Keyword>PSoC6</Keyword>
+<Keyword>Bluetooth</Keyword>
+<Keyword>BLE</Keyword>
+<Keyword>Bootloader</Keyword>
+<Keyword>Over the air</Keyword>
+<Keyword>OTA</Keyword>
+<Keyword>Upgradable Stack</Keyword>
+<Keyword>Upgradeable Stack</Keyword>
+<Keyword Hidden="true">CY8CKIT-062-BLE</Keyword>
+<Description>This examples demonstrates over the air (OTA) bootloading with a PSoC 6 MCU with Bluetooth Low Energy (BLE) connectivity. The BLE stack code is shared between applications to reduce flash usage. The bootloader may download updates to the BLE stack or to the application.</Description>
+<DeviceFilter>PSoC 63</DeviceFilter>
+<Document>CE220960.pdf</Document>
+<MinToolVersion>4.2</MinToolVersion>
+</Project>

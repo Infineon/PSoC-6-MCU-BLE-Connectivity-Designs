@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE215122_BLE_HID_Mouse" StarterProject="true" WorkspaceName="CE215122.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>HOGP</Keyword>
+  <Keyword>Mouse</Keyword>
+  <Keyword>HID</Keyword>
+  <Keyword>HIDS</Keyword>
+  <Description>BLE HID mouse example project that supports mouse movement and button click HID reports in boot and protocol mode. The example also demonstrates handling suspend event from the central device and enters low power mode when suspended. </Description>
+  <ShortDescription>Shows how to use the HID mouse with the BLE component. </ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE215122.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>

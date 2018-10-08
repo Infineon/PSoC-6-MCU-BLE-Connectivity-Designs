@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE224856_BLE_LP_Beacon_Hibernate_RTOS" WorkspaceName="CE224856.cywrk">
+<Version>1.0</Version>
+<Keyword>BLE</Keyword> 
+<Keyword>Connectivity</Keyword>
+<Keyword>Beacon</Keyword>
+<Keyword>RTC</Keyword> 
+<Keyword>Alarm</Keyword> 
+<Keyword>Hibernate Wakeup</Keyword> 
+<Keyword Hidden="true">CY8CKIT-062-BLE</Keyword>
+<Description>This code example implements the Eddystone Beacon (RTOS) CE and in addition saves power by entering Hibernate after a specified interval of time.</Description>
+<DeviceFilter>PSoC 63</DeviceFilter>
+<Document>CE224856_BLE_Low_Power_Beacon_with_Hibernate_RTOS.pdf</Document>
+<MinToolVersion>4.2</MinToolVersion>
+</Project>

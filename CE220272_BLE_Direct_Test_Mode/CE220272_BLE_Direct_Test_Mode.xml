@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE220272_BLE_Direct_Test_Mode" WorkspaceName="CE220272_BLE_Direct_Test_Mode.cywrk">
+	<Version>1.20</Version>
+	<Keyword>BLE</Keyword> 
+	<Keyword>HCI</Keyword> 
+	<Keyword>DTM</Keyword> 
+	<Keyword Hidden="true">CY8CKIT-062-BLE</Keyword>
+	<Description>This code example demonstrates Direct Test Mode (DTM) over the Host Controller Interface (HCI) using PSoC 6 MCU with BLE Connectivity.</Description>
+	<DeviceFilter>PSoC 63</DeviceFilter>
+	<Document>CE220272_BLE_Direct_Test_Mode.pdf</Document>
+	<MinToolVersion>4.2</MinToolVersion>
+</Project>

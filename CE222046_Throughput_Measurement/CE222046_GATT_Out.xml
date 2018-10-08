@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE222046_GATT_Out" WorkspaceName="CE222046_Throughput_Measurement.cywrk">
+	<Version>1.10</Version>
+	<Keyword>BLE</Keyword> 
+	<Keyword>UART</Keyword>
+	<Keyword>PWM</Keyword> 
+	<Keyword>BLE Throughput</Keyword>
+	<Keyword Hidden="true">CY8CKIT-062-BLE</Keyword>
+	<Description>This code example demonstrates how to maximize the BLE throughput on PSoC 6 MCU with Bluetooth Low Energy (BLE)
+	Connectivity device.</Description>
+	<DeviceFilter>PSoC 63</DeviceFilter>
+	<Document>CE222046_Throughput_Measurement.pdf</Document>
+	<MinToolVersion>4.2</MinToolVersion>
+</Project>

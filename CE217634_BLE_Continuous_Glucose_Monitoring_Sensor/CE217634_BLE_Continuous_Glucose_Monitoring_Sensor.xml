@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE217634_BLE_Continuous_Glucose_Monitoring_Sensor" StarterProject="true" WorkspaceName="CE217634.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>CGMP</Keyword>
+  <Keyword>CGMS</Keyword>
+  <Keyword>Continuous</Keyword>
+  <Keyword>Glucose</Keyword>
+  <Keyword>Monitoring</Keyword>
+  <Keyword>Service</Keyword>
+  <Description>Continuous Glucose Monitoring Sensor example project transfers data via a Continuous Glucose Monitoring Service.</Description>
+  <ShortDescription>Shows how to use the Continuous Glucose Monitoring Service with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE217634.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>

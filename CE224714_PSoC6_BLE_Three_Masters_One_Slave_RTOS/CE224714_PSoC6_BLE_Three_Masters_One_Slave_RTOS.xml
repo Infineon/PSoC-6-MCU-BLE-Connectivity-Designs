@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="PSoC6_BLE_Three_Masters_One_Slave_RTOS" WorkspaceName="CE224714.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>Multi Master</Keyword>
+  <Keyword>FreeRTOS</Keyword>  
+  <Keyword>RTOS</Keyword>
+  <Keyword Hidden="true">CY8CKIT-062-BLE</Keyword>
+  <Description>This example demonstrates how to configure the PSoC® 6 MCU with Bluetooth Low Energy (BLE) Connectivity device in simultaneous Multiple Master and Single Slave modes of operation. </Description>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE224714_PSoC6_BLE_Three_Masters_One_Slave_RTOS.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion>
+</Project>

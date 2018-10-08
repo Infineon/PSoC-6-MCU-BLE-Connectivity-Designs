@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="CE217633_BLE_Blood_Pressure_Sensor" StarterProject="true" WorkspaceName="CE217633.cywrk">
+  <Version>1.0</Version>
+  <Keyword>BLE</Keyword>
+  <Keyword>BLP</Keyword>
+  <Keyword>BLS</Keyword>
+  <Keyword>Blood Pressure</Keyword>
+  <Description>Blood Pressure Sensor example project reports Blood Pressure measurements via a Blood Pressure Service.</Description>
+  <ShortDescription>Shows how to use the Blood Pressure Service with the BLE component.</ShortDescription>
+  <DeviceFilter>PSoC 63</DeviceFilter>
+  <Document>CE217633.pdf</Document>
+  <MinToolVersion>4.2</MinToolVersion> 
+</Project>
+
