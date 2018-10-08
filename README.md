@@ -41,7 +41,7 @@ To use the code examples in this repository, please download and install
 
 **Note** Please refer to the code example documentation for selecting the appropriate kit for testing the project
 
-## Code Example List
+# Code Examples List
 #### 1. CE212736 - PSoC 6 MCU with BLE Connectivity - Find ME
 This code example demonstrates the implementation of a simple BLE Immediate Alert Service (IAS)-based Find Me profile using PSoC 6 MCU with BLE Connectivity.
 #### 2. CE212741 - IPSP Router and Node
@@ -84,6 +84,31 @@ This example project demonstrates the BLE Blood Pressure Sensor application work
 application uses the BLE Blood Pressure profile to report blood pressure measurement records to a client. Also, the Blood
 Pressure Sensor application uses the Battery Service to notify the Battery Level and the Device Information services to assert
 the Device Name and so on.
+#### 15. CE217634 - BLE Continuous Glucose Monitoring Sensor
+This example project demonstrates the Bluetooth Low Energy (BLE) Continuous Glucose Monitoring Sensor application workflow.
+#### 16. CE217635 BLE Cycling Sensor
+This example demonstrates the Cycling Speed and Cadence Service (CSCS) and Cycling Power Service (CPS) with
+PSoC 6 MCU with Bluetooth Low Energy (BLE) Connectivity.
+#### 17. CE217636 - BLE Environmental Sensing
+This example project demonstrates the Environmental Sensing Profile operation of the BLE PSoC Creator Component.
+The Environmental Sensor uses the Environmental Sensing Profile with one instance of Environmental Sensing and 
+Device Information Services to simulate measuring the wind speed. The Environmental Sensor operates with other 
+devices that implement the Environmental Collector Profile. The device switches to Deep Sleep mode between BLE 
+connection intervals. The BLE Component supports PSoC 6 BLE.
+#### 18. CE217637 - BLE Find Me
+This example project demonstrates the Find Me Profile operation of the BLE Component. The Find Me Target uses the Find Me
+Profile with one instance of the Immediate Alert Service to display the alerts if the Client has configured the device for alerting.
+The Find Me Target operates with other devices that implement the Find Me Locator Profile. The device switches to Deep Sleep
+mode between BLE connection intervals.
+#### 19. CE217638 - BLE Glucose Meter
+This example project demonstrates the BLE Glucose Meter application workflow. The Glucose Meter application uses the BLE Glucose 
+Profile to report glucose measurement records to a Client. Also, the Glucose Meter application uses the Battery Service to notify 
+the Battery Level and the Device Information Services to assert the Device Name, etc.
+#### 20. CE217639 - BLE Heart Rate
+This example demonstrates the Heart Rate Client and Server operation of the Bluetooth Low Energy (BLE) PSoC Creator Component.
+#### 21. CE217640 - BLE Phone Alert
+This code example demonstrates the current Ringer mode of the Phone Alert Server (a phone or CY8CKIT-062 PSoC 6 BLE Pioneer Kit)
+and the Ringer and Vibrate states on the user interface LEDs of the Phone Alert Client on the CY8CKIT-062 PSoC 6 BLE Pioneer Kit).
 
 ## References
 #### 1. PSoC 6 MCU
