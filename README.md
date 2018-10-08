@@ -42,6 +42,8 @@ To use the code examples in this repository, please download and install
 **Note** Please refer to the code example documentation for selecting the appropriate kit for testing the project
 
 ## Code Example List
+#### 1. CE212736 - PSoC 6 MCU with BLE Connectivity - Find ME
+This code example demonstrates the implementation of a simple BLE Immediate Alert Service (IAS)-based Find Me profile using PSoC 6 MCU with BLE Connectivity.
 
 ## References
 #### 1. PSoC 6 MCU
